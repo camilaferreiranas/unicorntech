@@ -1,8 +1,10 @@
 package br.com.camilaferreiranas.unicorntechapp.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 public class Message {
 
     @Id

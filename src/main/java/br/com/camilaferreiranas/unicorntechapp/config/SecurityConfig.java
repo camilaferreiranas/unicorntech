@@ -38,6 +38,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "users").permitAll()
+                        .requestMatchers(HttpMethod.GET, "v3/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "swagger-ui/**").permitAll()
                         .anyRequest().authenticated()
                 ).csrf(csrf -> csrf.disable())
                 .oauth2ResourceServer(oauth -> oauth.jwt(Customizer.withDefaults()))

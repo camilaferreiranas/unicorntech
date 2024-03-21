@@ -3,6 +3,7 @@ package br.com.camilaferreiranas.unicorntechapp.controllers;
 import br.com.camilaferreiranas.unicorntechapp.entities.dto.LoginRequest;
 import br.com.camilaferreiranas.unicorntechapp.entities.dto.LoginResponse;
 import br.com.camilaferreiranas.unicorntechapp.services.LoginService;
+import io.swagger.v3.oas.models.annotations.OpenAPI30;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.jwt.JwtEncoder;

@@ -1,6 +1,7 @@
 package br.com.camilaferreiranas.unicorntechapp.entities;
 
 import br.com.camilaferreiranas.unicorntechapp.enums.UserEnum;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,8 +23,6 @@ public class User {
 
     private UserEnum userType;
 
-    @OneToOne
-    private Startup startup;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Message> messages;
