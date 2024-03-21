@@ -32,7 +32,7 @@ jobs:
         cache: maven
         
     - name: Start Docker Compose
-      run: docker-compose -f docker/docker-compose.yml up --detach
+      run: docker-compose -f docker/ddocker-compose.yaml up --detach
       
     - name: Build with Maven
       run: mvn -B package --file pom.xml
@@ -43,4 +43,4 @@ jobs:
       run: mvn test
 
     - name: Stop Docker Compose
-      run: docker-compose -f docker/docker-compose.yml down
+      run: docker-compose -f docker/docker-compose.yaml down
